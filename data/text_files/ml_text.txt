@@ -1,0 +1,5 @@
+ ML basics
+
+    Machine Learning (ML) is a subset of AI that enables systems to automatically learn and improve from experience without being explicitly programmed. ML algorithms analyze large volumes of data, identify patterns, and make predictions or classifications. Common types of ML include supervised learning, unsupervised learning, and reinforcement learning.
+
+    Together, AI and ML are transforming industries by enabling automation, predictive analytics, personalized experiences, and data-driven decision-making. They are widely used in fields such as healthcare (disease prediction), finance (fraud detection), marketing (customer segmentation), and technology (recommendation systems and chatbots). 

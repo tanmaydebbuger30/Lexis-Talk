@@ -1,0 +1,3 @@
+Python Programming intro
+
+    Artificial Intelligence (AI) refers to the simulation of human intelligence in machines that are designed to think, learn, and make decisions like humans. AI systems can perform tasks such as speech recognition, image understanding, natural language processing, and decision-making with minimal human intervention.

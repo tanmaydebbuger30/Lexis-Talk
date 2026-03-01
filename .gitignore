@@ -1,0 +1,22 @@
+cat >> .gitignore <<'EOF'
+
+# secrets + local
+.env
+.DS_Store
+
+# IDE
+.idea/
+
+# python
+.venv/
+__pycache__/
+*.pyc
+
+# chroma / vector db (do NOT commit these)
+vector_store/
+data/vector_store/
+data/vector_store_legalbert/
+
+# notebooks
+.ipynb_checkpoints/
+EOF

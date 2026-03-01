@@ -1,0 +1,51 @@
+Customer_ID,Customer_Name,Age,Gender,Product_Category,Amount_Spent
+CUST001,Mia,40,Female,Clothing,413.21
+CUST002,Sophia,20,Other,Books,372.19
+CUST003,Amelia,39,Other,Toys,995.61
+CUST004,Lucas,26,Other,Electronics,587.26
+CUST005,Harper,38,Male,Home Decor,626.08
+CUST006,Benjamin,59,Male,Home Decor,621.26
+CUST007,Abigail,62,Female,Books,358.91
+CUST008,Ethan,38,Other,Toys,256.99
+CUST009,Mason,46,Other,Clothing,235.52
+CUST010,Amelia,37,Other,Home Decor,284.52
+CUST011,Liam,32,Other,Books,677.87
+CUST012,Noah,54,Other,Clothing,821.03
+CUST013,Evelyn,29,Female,Groceries,255.55
+CUST014,Oliver,27,Female,Groceries,25.79
+CUST015,Emma,63,Female,Home Decor,71.12
+CUST016,Ethan,58,Male,Electronics,183.13
+CUST017,Noah,46,Male,Home Decor,433.22
+CUST018,Abigail,45,Male,Home Decor,37.1
+CUST019,Elijah,48,Other,Books,170.63
+CUST020,Sophia,28,Other,Electronics,906.59
+CUST021,Emma,54,Other,Groceries,960.11
+CUST022,Oliver,44,Female,Home Decor,719.85
+CUST023,Sophia,41,Male,Electronics,577.9
+CUST024,Sophia,59,Male,Electronics,319.47
+CUST025,Lucas,46,Male,Toys,999.77
+CUST026,Logan,65,Male,Toys,808.23
+CUST027,Oliver,46,Female,Toys,515.45
+CUST028,Benjamin,28,Female,Home Decor,463.08
+CUST029,Sophia,38,Male,Clothing,198.26
+CUST030,Noah,38,Male,Clothing,381.89
+CUST031,Benjamin,36,Male,Clothing,581.68
+CUST032,Mason,65,Other,Books,989.3
+CUST033,Logan,25,Male,Books,483.81
+CUST034,Harper,37,Male,Books,739.15
+CUST035,Elijah,19,Other,Books,997.24
+CUST036,Mia,57,Other,Clothing,833.44
+CUST037,Oliver,33,Other,Electronics,222.59
+CUST038,Amelia,59,Male,Books,736.06
+CUST039,Noah,62,Female,Home Decor,889.64
+CUST040,Amelia,32,Female,Home Decor,534.44
+CUST041,Evelyn,46,Female,Electronics,494.02
+CUST042,Isabella,25,Other,Groceries,926.13
+CUST043,Oliver,51,Female,Groceries,420.23
+CUST044,Logan,49,Other,Electronics,224.9
+CUST045,Ethan,51,Female,Books,446.96
+CUST046,Liam,34,Male,Home Decor,864.96
+CUST047,Logan,55,Other,Clothing,152.62
+CUST048,Elijah,25,Other,Clothing,302.46
+CUST049,Abigail,57,Female,Home Decor,777.48
+CUST050,Oliver,39,Other,Groceries,755.99
