@@ -19,4 +19,5 @@ data/vector_store_legalbert/
 
 # notebooks
 .ipynb_checkpoints/
-EOF
+EOF.venv311/
+.venv/
