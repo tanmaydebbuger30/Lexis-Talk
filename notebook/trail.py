@@ -526,7 +526,7 @@ def fetch_h1b_updates() -> str:
         context_pieces.append("Key H‑1B information from USCIS:\n" + main_section)
 
     context = "\n\n".join(context_pieces).strip()
-    print(f"📄 H‑1B context length from USCIS: {len(context)} characters")
+    print(f" H‑1B context length from USCIS: {len(context)} characters")
     return context
 
 
@@ -569,7 +569,7 @@ Provide a clear, accurate answer. If you summarize or interpret, keep it faithfu
 Mention that the information is sourced from the official USCIS H‑1B Specialty Occupations page.
 """.strip()
 
-            print("\n🤖 Sending H‑1B question to LLM with USCIS context...")
+            print("\n Sending H‑1B question to LLM with USCIS context...")
             resp = llm.invoke([HumanMessage(content=prompt)])
             result = {
                 "answer": resp.content,
@@ -650,7 +650,7 @@ QUESTION: {query}
 
 Answer based on the context above. If relevant information exists, use it. If not, provide a helpful answer from your knowledge:""".strip()
 
-    print("\n🤖 Sending to LLM with RAG context...")
+    print("\n Sending to LLM with RAG context...")
     resp = llm.invoke([HumanMessage(content=prompt)])
 
     result = {
@@ -756,9 +756,9 @@ def transcribe_audio_to_text(audio_array: np.ndarray, sr: int, lang_hint: str = 
 openai_client = None
 if os.getenv("OPENAI_API_KEY"):
     openai_client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
-    print("✅ OpenAI TTS client initialized")
+    print(" OpenAI TTS client initialized")
 else:
-    print("⚠️ OpenAI API key not found - TTS will be disabled")
+    print(" OpenAI API key not found - TTS will be disabled")
 
 def synthesize_tts_gpt(text: str, output_path: str = None, voice: str = "alloy") -> str:
     """
@@ -773,11 +773,11 @@ def synthesize_tts_gpt(text: str, output_path: str = None, voice: str = "alloy")
         Path to generated audio file, or None if TTS fails
     """
     if not openai_client:
-        print("⚠️ TTS unavailable: OpenAI API key not set")
+        print(" TTS unavailable: OpenAI API key not set")
         return None
     
     if not text or not text.strip():
-        print("⚠️ TTS: Empty text provided")
+        print(" TTS: Empty text provided")
         return None
     
     try:
@@ -879,7 +879,7 @@ def rag_answer_with_lang(
     
     # Generate TTS ONLY if do_tts is True and we have text
     if do_tts and answer_final:
-        print(f"🎤 Generating TTS audio for {output_lang} output...")
+        print(f" Generating TTS audio for {output_lang} output...")
         # Use appropriate voice based on language
         voice = "nova" if output_lang == "hi" else "alloy"
         audio_path = synthesize_tts_gpt(answer_final, voice=voice)
@@ -973,7 +973,7 @@ def gradio_rag_voice(audio, input_lang_choice, output_lang_choice, history):
         wav = wav / (wav.max() + 1e-8)
 
     # Step 1: ASR (pass dropdown hint)
-    print(f"\n🎤 Processing audio: sr={sr}, shape={wav.shape}, duration={len(wav)/sr:.2f}s")
+    print(f"\n Processing audio: sr={sr}, shape={wav.shape}, duration={len(wav)/sr:.2f}s")
     spoken_text = transcribe_audio_to_text(wav, sr, lang_hint=input_lang_choice)
     if not spoken_text:
         debug = "ASR returned empty text – maybe audio is too quiet or too short."
@@ -984,7 +984,7 @@ def gradio_rag_voice(audio, input_lang_choice, output_lang_choice, history):
     print(f" ASR transcribed: '{spoken_text}'")
 
     # Step 2: RAG + language pipeline
-    print(f"\n🔍 Starting RAG pipeline for query: '{spoken_text}'")
+    print(f"\n Starting RAG pipeline for query: '{spoken_text}'")
     try:
         result = rag_answer_with_lang(
             spoken_text,
