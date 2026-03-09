@@ -20,4 +20,15 @@ data/vector_store_legalbert/
 # notebooks
 .ipynb_checkpoints/
 EOF.venv311/
+
+
+.DS_Store
+data/vector_store/
+data/vector_store_legalbert/
+*.db
+*.sqlite3
+
 .venv/
+.venv311/
+__pycache__/
+.DS_Store
