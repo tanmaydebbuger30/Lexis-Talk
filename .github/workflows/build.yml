@@ -1,4 +1,3 @@
-cat > .github/workflows/build.yml <<'YAML'
 name: Python Build Test
 
 on:
@@ -29,4 +28,3 @@ jobs:
       - name: Verify torch
         run: |
           python -c "import torch; print(torch.__version__)"
-YAML
