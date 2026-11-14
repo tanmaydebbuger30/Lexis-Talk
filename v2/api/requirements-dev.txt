@@ -1,0 +1,12 @@
+# Lightweight set used by CI: no torch, no model downloads.
+fastapi>=0.162,<0.163
+uvicorn[standard]>=0.54,<0.55
+pydantic-settings>=2.16,<3
+python-multipart>=0.0.33,<0.1
+langchain-text-splitters>=1.1,<2
+chromadb>=1.5,<2
+pypdf>=7.1,<8
+httpx>=0.28,<0.29
+pytest>=9,<10
+ruff>=0.17,<0.18
+pip-audit>=2.10,<3
