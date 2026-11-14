@@ -1,0 +1,87 @@
+{
+    "version": 2,
+    "description": "Allowlist of upstream sources LexiTalk may ingest. Only these queries are fetched; every fetched document is snapshotted with provenance (URL, fetch time, SHA-256) before it can be indexed.",
+    "sources": [
+      {
+        "source_id": "fr-immigration-rules",
+        "kind": "federal_register",
+        "title": "Federal Register — immigration rules and proposed rules",
+        "classification": "public",
+        "license": "US Government work (17 U.S.C. § 105), public domain",
+        "owner": "corpus-maintainer",
+        "query": {
+          "agencies": [
+            "u-s-citizenship-and-immigration-services",
+            "homeland-security-department",
+            "state-department",
+            "executive-office-for-immigration-review",
+            "employment-and-training-administration"
+          ],
+          "types": ["RULE", "PRORULE"],
+          "since": "2023-01-01",
+          "max_documents": 250
+        }
+      },
+      {
+        "source_id": "fr-presidential-immigration",
+        "kind": "federal_register",
+        "title": "Federal Register — presidential documents mentioning immigration or visas",
+        "classification": "public",
+        "license": "US Government work (17 U.S.C. § 105), public domain",
+        "owner": "corpus-maintainer",
+        "query": {
+          "types": ["PRESDOCU"],
+          "term": "immigration | visa | nonimmigrant",
+          "since": "2023-01-01",
+          "max_documents": 60
+        }
+      },
+
+      {
+        "source_id": "official-pdfs",
+        "kind": "pdf",
+        "title": "Official immigration law and policy documents (PDF)",
+        "classification": "public",
+        "license": "US Government work (17 U.S.C. § 105), public domain",
+        "owner": "corpus-maintainer",
+        "documents": [
+          {
+            "document_id": "usc-title-08",
+            "file": "usc08@119-142.pdf",
+            "title": "U.S. Code Title 8 — Aliens and Nationality (release point 119-142)",
+            "doc_type": "Statute",
+            "source_url": "https://uscode.house.gov/download/download.shtml",
+            "as_of": "2026-11-13",
+            "sha256": "f5e789b50e273e9b9006c26b96cad670d7caa0afbbf141cbe5222b7f29d53be6"
+          },
+          {
+            "document_id": "cfr-title-08-2025",
+            "file": "CFR-2025-title8-vol1.pdf",
+            "title": "8 CFR — Aliens and Nationality (annual edition, revised as of January 1, 2025)",
+            "doc_type": "Regulation",
+            "source_url": "https://www.govinfo.gov/app/collection/cfr/2025",
+            "as_of": "2025-01-01",
+            "sha256": "7057d4af03ed97a1f9649364f375d7ffaa8ca28dee28502c0d943942807584d3"
+          },
+          {
+            "document_id": "uscis-policy-manual",
+            "file": "uscis-policy-manual-2026-10-27.pdf",
+            "title": "USCIS Policy Manual (current as of October 27, 2026)",
+            "doc_type": "Policy Manual",
+            "source_url": "https://www.uscis.gov/policy-manual",
+            "as_of": "2026-10-27",
+            "sha256": "5824b39c2d195916a978174a4ad1d921f131be5d5880fd96c5671bfb45208a60"
+          },
+          {
+            "document_id": "visa-bulletin-2026-11",
+            "file": "visa-bulletin-2026-11.pdf",
+            "title": "Visa Bulletin for November 2026",
+            "doc_type": "Visa Bulletin",
+            "source_url": "https://travel.state.gov/content/travel/en/legal/visa-law0/visa-bulletin.html",
+            "as_of": "2026-11-01",
+            "sha256": "b604a4ade1a07ef530a5c878c2e42ccafb23085d7f18fd49b20400d769429a26"
+          }
+        ]
+      }
+    ]
+  }

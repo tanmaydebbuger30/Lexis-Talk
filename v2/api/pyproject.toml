@@ -1,0 +1,20 @@
+[project]
+name = "lexitalk-api"
+version = "0.1.0"
+requires-python = ">=3.11"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+markers = ["integration: uses real chromadb + pypdf (no models, no network)"]
+
+[tool.ruff]
+line-length = 120
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP", "S", "SIM"]
+ignore = ["S101", "S311", "E501"]  # line length is enforced by `ruff format`
+
+[tool.ruff.lint.per-file-ignores]
+"tests/*" = ["S105", "S106"]

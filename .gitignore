@@ -32,3 +32,18 @@ data/vector_store_legalbert/
 .venv311/
 __pycache__/
 .DS_Store
+
+# v2
+.venv/
+**/.venv/
+**/__pycache__/
+**/.pytest_cache/
+**/.ruff_cache/
+**/node_modules/
+v2/web/dist/
+v2/api/.vector_store/
+.env
+**/.env
+!**/.env.example
+v2/data/federal_register/*.json
+!v2/data/federal_register/catalog.json
